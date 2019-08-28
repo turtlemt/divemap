@@ -4,7 +4,7 @@
     <style>
        /* Set the size of the div element that contains the map */
       #map {
-        height: 400px;  /* The height is 400 pixels */
+        height: 100%;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
     </style>
@@ -17,12 +17,19 @@
     // Initialize and add the map
     function initMap() {
       // The location of Uluru
-      var uluru = {lat: -25.344, lng: 131.036};
+      var myCenter = {lat: 24.434666, lng: 120.6295867};
       // The map, centered at Uluru
       var map = new google.maps.Map(
-          document.getElementById('map'), {zoom: 4, center: uluru});
-      // The marker, positioned at Uluru
-      var marker = new google.maps.Marker({position: uluru, map: map});
+          document.getElementById('map'), {zoom: 6, center: myCenter});
+      
+      var markers = myDiveSites.map(function(myDiveSite, i) {
+        return new google.maps.Marker({
+          position: {lat: myDiveSite.lat, lng:myDiveSite.lng},
+          title: myDiveSite.title
+        });
+      });
+
+      var marker = new google.maps.Marker({position: myDiveSites, map: map});
     }
     </script>
     <!--Load the API from the specified URL
@@ -35,3 +42,10 @@
     </script>
   </body>
 </html>
+
+<script>
+  var myDiveSites = [
+    {title:'Bitou', lat: 25.125, lng: 121.91},
+    {title:'Tulamben', lat: -8.276, lng: 115.59},
+  ];
+</script>
