@@ -23,7 +23,7 @@
           document.getElementById('map'), {zoom: 6, center: myCenter});
       
       var markers = myDiveSites.map(function(myDiveSite, i) {
-        return new google.maps.Marker({
+        new google.maps.Marker({
           position: {lat: myDiveSite.lat, lng:myDiveSite.lng},
           title: myDiveSite.title
         });
