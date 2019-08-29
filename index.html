@@ -23,9 +23,11 @@
           document.getElementById('map'), {zoom: 6, center: myCenter});
       
       var markers = myDiveSites.map(function(myDiveSite, i) {
+        var image = './dive_flag.png';
         return new google.maps.Marker({
           position: {lat: myDiveSite.lat, lng:myDiveSite.lng},
           title: myDiveSite.title,
+          icon: image,
           map: map
         });
       });
