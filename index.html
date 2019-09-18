@@ -25,17 +25,18 @@
       
       var markers = myDiveSites.map(function(myDiveSite, i) {
         var image = './dive_flag.png';
-        return new google.maps.Marker({
+        var marker = new google.maps.Marker({
           position: {lat: myDiveSite.lat, lng:myDiveSite.lng},
           title: myDiveSite.title,
           icon: image,
           map: map
         });
-      });
-      google.maps.AddListener(marker, 'click', function (map, marker) {
+        google.maps.AddListener(marker, 'click', function (map, marker) {
             infowindow.setContent("123")
             infowindow.open(map, marker)
         });
+      });
+      
       /*var marker = new google.maps.Marker({
           position: {lat: myDiveSites[0].lat, lng:myDiveSites[0].lng},
           title: myDiveSites[0].title,
@@ -66,5 +67,6 @@
     {title:'Lembeh', lat: 1.4382737, lng: 125.2141881},
     {title:'Anilao', lat: 13.7525504, lng: 120.8981384},
     {title:'Dumaguete', lat: 9.1270303, lng: 123.3364775},
+    {title:'Malapascua', lat: 11.3370524, lng: 124.0966194},
   ];
 </script>
