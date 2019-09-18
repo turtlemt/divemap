@@ -14,6 +14,7 @@
     <!--The div element for the map -->
     <div id="map"></div>
     <script>
+    //  https://turtlemt.github.io/divemap/
     // Initialize and add the map
     function initMap() {
       // The location of Uluru
@@ -28,6 +29,7 @@
           position: {lat: myDiveSite.lat, lng:myDiveSite.lng},
           title: myDiveSite.title,
           icon: image,
+          infowindow:"123",
           map: map
         });
       });
@@ -59,6 +61,6 @@
     {title:'Ambon', lat: -3.699571, lng: 128.1116453},
     {title:'Banda', lat: -4.523013, lng: 129.8961808},
     {title:'Lembeh', lat: 1.4382737, lng: 125.2141881},
-    {title:'Anilao', lat: 13.7525504, lng: 120.8981384, infowindow:"123"},
+    {title:'Anilao', lat: 13.7525504, lng: 120.8981384},
   ];
 </script>
