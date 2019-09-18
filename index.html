@@ -25,17 +25,19 @@
       
       var markers = myDiveSites.map(function(myDiveSite, i) {
         var image = './dive_flag.png';
-        var marker = new google.maps.Marker({
+        return new google.maps.Marker({
           position: {lat: myDiveSite.lat, lng:myDiveSite.lng},
           title: myDiveSite.title,
           icon: image,
           map: map
         });
+      });
+      
+      markers.map(function(marker, i) {
         google.maps.AddListener(marker, 'click', function (map, marker) {
             infowindow.setContent("123")
             infowindow.open(map, marker)
         });
-        return marker;
       });
       
       /*var marker = new google.maps.Marker({
@@ -70,5 +72,6 @@
     {title:'Dumaguete', lat: 9.1270303, lng: 123.3364775},
     {title:'Malapascua', lat: 11.3370524, lng: 124.0966194},
     {title:'Sogod Bay', lat: 10.0553627, lng: 125.0355207},
+    {title:'Ticao Island', lat: 12.6035129, lng: 123.7040309},
   ];
 </script>
