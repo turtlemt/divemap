@@ -29,10 +29,13 @@
           position: {lat: myDiveSite.lat, lng:myDiveSite.lng},
           title: myDiveSite.title,
           icon: image,
-          infowindow:"123",
           map: map
         });
       });
+      google.maps.AddListener(marker, 'click', function (map, marker) {
+            infowindow.setContent("123")
+            infowindow.open(map, marker)
+        });
       /*var marker = new google.maps.Marker({
           position: {lat: myDiveSites[0].lat, lng:myDiveSites[0].lng},
           title: myDiveSites[0].title,
@@ -62,5 +65,6 @@
     {title:'Banda', lat: -4.523013, lng: 129.8961808},
     {title:'Lembeh', lat: 1.4382737, lng: 125.2141881},
     {title:'Anilao', lat: 13.7525504, lng: 120.8981384},
+    {title:'Dumaguete', lat: 9.1270303, lng: 123.3364775},
   ];
 </script>
