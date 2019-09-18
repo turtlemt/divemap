@@ -21,7 +21,7 @@
       var myCenter = {lat: 24.434666, lng: 120.6295867};
       // The map, centered at Uluru
       var map = new google.maps.Map(
-          document.getElementById('map'), {zoom: 6, center: myCenter});
+          document.getElementById('map'), {zoom: 6, center: myCenter, gestureHandling: 'greedy'});
       
       var markers = myDiveSites.map(function(myDiveSite, i) {
         var image = './dive_flag.png';
@@ -80,5 +80,6 @@
     {title:'Coron', lat: 12.2348721, lng: 120.0837924, infoContent: '<a href=" http://blog.macrooceans.com/?p=71" target="_blank">Blog Post</a>'},
     {title:'Apo Reef', lat: 12.717641, lng: 120.3776537, infoContent: '<a href=" http://blog.macrooceans.com/?p=58" target="_blank">Blog Post</a>'},
     {title:'Raja Ampat', lat: -0.5551063, lng: 130.6659531, infoContent: '<a href=" http://blog.macrooceans.com/?p=64" target="_blank">Blog Post</a>'},
+    {title:'Takeno', lat: 35.6637181, lng: 134.7638374, infoContent: '<a href=" http://blog.macrooceans.com/?p=704" target="_blank">Blog Post</a>'},
   ];
 </script>
