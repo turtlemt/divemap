@@ -37,7 +37,7 @@
         if ("undefine" != typeof myDiveSites[i].infoContent) {
           infowindow = new google.maps.InfoWindow();
           marker.addListener('click', function() {
-            infowindow.setContent("123");
+            infowindow.setContent(myDiveSites[i].infoContent);
             infowindow.open(map, marker);
           });
         }
